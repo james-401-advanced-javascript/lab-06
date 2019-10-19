@@ -76,7 +76,13 @@ class Model {
     }
   }
 
-  sanitize(record) {}
+  sanitize(record) {
+    if (record === undefined) return undefined;
+    let valid = validate(record, this.schema);
+    console.log('Valid obj: ', valid);
+    if (valid) return true;
+    else return false;
+  }
 }
 
 module.exports = Model;
