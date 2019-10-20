@@ -18,14 +18,29 @@ class Model {
 
     if (res.ok) {
       let json = await res.json();
-      console.log('RES: ', json);
       return json;
     } else {
       console.log(res.statusText);
+      return false;
     }
   }
 
-  getFromField(query) {}
+  async getFromField(query) {
+    let path = this.url;
+    if (query) {
+      path += `/?${query}`;
+    }
+
+    let res = await fetch(path, { method: 'GET' });
+
+    if (res.ok) {
+      let json = await res.json();
+      return json;
+    } else {
+      console.log(res.statusText);
+      return false;
+    }
+  }
 
   async create(record) {
     // validate input
