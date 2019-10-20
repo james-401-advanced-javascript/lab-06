@@ -3,9 +3,9 @@
 const Model = require('./model.js');
 
 const schema = {
-  name: { type: String, required: true },
+  name: { type: 'string', required: true },
   color: {
-    type: String,
+    type: 'string',
     required: true,
     lowercase: true,
     enum: ['red', 'blue', 'yellow', 'purple'],
