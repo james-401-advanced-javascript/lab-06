@@ -59,40 +59,53 @@ async function printPersonInfo(arg1, arg2) {
 }
 
 // Print team info
+//
+// Team Name: Yellow Rhino
+// Color: Yellow
+// Members:
+// - Sonia Kandah
+// - Erin Trainor
+
 async function printTeamInfo(arg1, arg2) {
   if (arg1 === undefined || arg2 === undefined) {
     console.log('No Record Found');
     return;
   }
 
-  const queryString = `firstName=${arg1}&lastName=${arg2}`;
-  const foundPerson = await people.getFromField(queryString);
-  if (foundPerson[0] === undefined) {
+  const queryString = `name=${arg1}+${arg2}`;
+  const foundTeam = await teams.getFromField(queryString);
+  if (foundTeam[0] === undefined) {
     console.log('No Record Found');
     return;
   }
 
-  if (!foundPerson) {
+  if (!foundTeam) {
     console.log('No Record Found');
     return;
   }
 
-  const foundTeam = await teams.get(foundPerson[0].team);
-  const birthday = new Date(foundPerson[0].birthday);
+  let teamMembers = await people.getFromField(`team=${foundTeam[0].id}`);
 
-  console.log('Name: ', `${arg1} ${arg2}`);
-  console.log('Team: ', foundTeam.name);
-  console.log('Birthday: ', birthday.toLocaleDateString());
-  switch (foundPerson[0].likes) {
-  case 'dogs':
-    console.log('Likes: Dogs');
+  console.log('Team Name: ', `${arg1} ${arg2}`);
+  switch (foundTeam[0].color) {
+  case 'red':
+    console.log('Color: Red');
     break;
-  case 'cats':
-    console.log('Likes: Cats');
+  case 'blue':
+    console.log('Color: Blue');
+    break;
+  case 'yellow':
+    console.log('Color: Yellow');
     break;
   default:
-    console.log('Likes: Cats and Dogs');
+    console.log('Color: Purple');
   }
+  console.log('Members:');
+  teamMembers.forEach(person => {
+    console.log(`- ${person.firstName} ${person.lastName}`);
+  });
 }
 
 printPersonInfo(firstArg, secondArg);
+
+printTeamInfo(firstArg, secondArg);

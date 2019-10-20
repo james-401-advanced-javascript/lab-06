@@ -19,10 +19,6 @@ describe('Model', () => {
     expect(people.sanitize()).toBe(undefined);
   });
 
-  it('can create', () => {
-    expect(people.create(testPerson)).toBeTruthy();
-  });
-
   it('can read', () => {
     expect(people.get(testPerson.id)).toBeTruthy();
   });
