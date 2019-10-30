@@ -1,0 +1,108 @@
+{
+  "people": [
+    {
+      "id": 1,
+      "firstName": "Anna",
+      "lastName": "Li",
+      "birthday": "2020-04-10T07:00:00.000Z",
+      "likes": "cats",
+      "__v": 0,
+      "team": 3
+    },
+    {
+      "id": 2,
+      "firstName": "Morgan",
+      "lastName": "Shaw",
+      "birthday": "2020-04-10T07:00:00.000Z",
+      "likes": "both",
+      "__v": 0,
+      "team": 1
+    },
+    {
+      "id": 3,
+      "firstName": "Nadya",
+      "lastName": "Ilinskaya",
+      "birthday": "2020-09-05T07:00:00.000Z",
+      "likes": "cats",
+      "__v": 0,
+      "team": 3
+    },
+    {
+      "id": 4,
+      "firstName": "Martin",
+      "lastName": "Balke",
+      "birthday": "1991-06-12T07:00:00.000Z",
+      "likes": "both",
+      "__v": 0,
+      "team": 2
+    },
+    {
+      "id": 5,
+      "firstName": "Jessica",
+      "lastName": "Elliott",
+      "birthday": "2020-06-25T07:00:00.000Z",
+      "likes": "dogs",
+      "__v": 0,
+      "team": 2
+    },
+    {
+      "id": 6,
+      "firstName": "Meron",
+      "lastName": "Sibani",
+      "birthday": "2020-01-03T08:00:00.000Z",
+      "likes": "dogs",
+      "__v": 0,
+      "team": 1
+    },
+    {
+      "id": 7,
+      "firstName": "James",
+      "lastName": "Dunn",
+      "birthday": "2020-05-10T07:00:00.000Z",
+      "likes": "dogs",
+      "__v": 0,
+      "team": 2
+    },
+    {
+      "firstName": "Sonia",
+      "lastName": "Kandah",
+      "birthday": "2020-02-22T08:00:00.000Z",
+      "likes": "both",
+      "id": 8,
+      "team": 3
+    },
+    {
+      "firstName": "Erin",
+      "lastName": "Trainor",
+      "birthday": "2020-05-12T07:00:00.000Z",
+      "likes": "both",
+      "id": 9,
+      "team": 3
+    }
+  ],
+  "teams": [
+    {
+      "id": 1,
+      "name": "Red Heron",
+      "color": "red",
+      "__v": 0
+    },
+    {
+      "id": 2,
+      "name": "Blue Otter",
+      "color": "blue",
+      "__v": 0
+    },
+    {
+      "id": 3,
+      "name": "Yellow Rhino",
+      "color": "yellow",
+      "__v": 0
+    },
+    {
+      "name": "Purple Cat",
+      "color": "purple",
+      "id": 4
+    }
+  ]
+}
